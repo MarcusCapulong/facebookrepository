@@ -1,121 +1,123 @@
-body {
-  background-color: #f0f2f5;
-  font-family: Arial, sans-serif;
+/* Ensure full-screen layout */
+html, body, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #f3f3f3;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.app {
-  text-align: center;
-  padding: 30px 20px;
+/* Center everything */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-h1 {
-  color: #333;
-  margin-bottom: 25px;
-}
-
-/* ===== POST FORM ===== */
-.form {
-  background: white;
-  width: 40%;
-  margin: 0 auto;
+/* Main card */
+.container {
+  background-color: white;
+  width: 420px;
+  max-width: 90%;
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Input and textarea styling */
+/* Title */
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .form input,
 .form textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 6px;
+  padding: 10px;
   border: 1px solid #ccc;
-  font-size: 15px;
-  background-color: white;
-  color: black;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
 }
 
-.form input::placeholder,
-.form textarea::placeholder {
-  color: #777;
+.form input:focus,
+.form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
 }
 
-.form textarea {
-  height: 80px;
+textarea {
   resize: none;
+  height: 70px;
 }
 
-/* Post button */
-.form button {
-  width: 100%;
+/* Button */
+button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 12px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 10px;
   border-radius: 6px;
-  margin-top: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
-.form button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
-/* ===== FEED SECTION ===== */
+/* Feed */
 .feed {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Individual post card */
-.card {
-  background: white;
-  width: 50%;
-  margin: 15px 0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
   text-align: left;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Add hover effect for better visibility */
-.card:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+.no-posts {
+  color: #777;
+  font-style: italic;
+  text-align: center;
 }
 
-/* Post details */
-.card .author {
-  font-weight: bold;
-  font-size: 17px;
-  color: #222;
-  margin-bottom: 6px;
+.post {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
-.card .content {
-  margin-bottom: 12px;
-  line-height: 1.5;
+.post h3 {
+  margin: 0 0 5px;
   color: #333;
-  font-size: 15px;
 }
 
-/* Post image */
-.card img {
+.post .content {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.post-image {
   width: 100%;
   border-radius: 8px;
-  margin-bottom: 12px;
+  margin: 10px 0;
 }
 
-/* Timestamp */
-.card .timestamp {
-  font-size: 13px;
+.date {
+  font-size: 12px;
   color: gray;
   text-align: right;
 }
