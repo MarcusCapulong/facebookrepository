@@ -1,0 +1,121 @@
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* ===== POST FORM ===== */
+.form {
+  background: white;
+  width: 40%;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and textarea styling */
+.form input,
+.form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #777;
+}
+
+.form textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* Post button */
+.form button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+/* ===== FEED SECTION ===== */
+.feed {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Individual post card */
+.card {
+  background: white;
+  width: 50%;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Add hover effect for better visibility */
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Post details */
+.card .author {
+  font-weight: bold;
+  font-size: 17px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.card .content {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: #333;
+  font-size: 15px;
+}
+
+/* Post image */
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Timestamp */
+.card .timestamp {
+  font-size: 13px;
+  color: gray;
+  text-align: right;
+}
